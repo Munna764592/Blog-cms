@@ -1,0 +1,17 @@
+<%- include("./main.ejs")%>
+
+<body>
+    <nav class="nav">
+        <i class="uil uil-bars navOpenBtn"></i>
+        <div style="display: flex;align-items: center;"><img class="logoimg" src="/logo/logoheader.png" alt="Image">
+            <a href="/" class="logo">Congesta College</a>
+        </div>
+        <ul class="nav-links">
+            <i class="uil uil-times navCloseBtn"></i>
+            <li><a href="/addpage">Add page</a></li>
+            <li><a href="/editpage">Edit Pages</a></li>
+        </ul>
+        <div>Welcome <%- admin.username %>!</div>
+        <button onclick="confirmLogout()"
+            style="padding: 10px 15px; font-size: 18px; cursor: pointer; background-color: black; border-radius: 6px; outline: none; color: white;border: none;">Logout</button>
+    </nav>

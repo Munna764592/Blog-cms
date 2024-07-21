@@ -1,0 +1,30 @@
+<%- include("./layouts/headerDas.ejs")%>
+    <div class="addpage">
+        <h1 style="margin: 20px; font-size: 40px;font-weight: 600;">Update Page</h1>
+        <% if(typeof message !=='undefined' ){ %>
+            <div style="color: green; ">
+                <%=message%>
+            </div>
+            <% } %>
+                <div class="addpage-main">
+                    <form action="/updatepage" method="POST" enctype="multipart/form-data">
+                        <input value="<%=page._id%>" name="id" type="hidden">
+                        <div class="input-group flex-nowrap">
+                            <div style="display: flex;align-items: center;margin-right: 38px; width: 100px;">Page Title:</div>
+                            <input type="text" class="form-control" name="pagetitle" value="<%=page.pagetitle%>"
+                                required>
+                        </div>
+                        <div class="input-group" style="margin-top: 30px; margin-bottom: 30px;">
+                            <div style="display: flex;align-items: center;margin-right: 20px;width: 120px;">Hero Image:</div>
+                            <input type="file" class="form-control upload-box " id="inputGroupFile02" name="image"
+                                accept="image/*">
+                        </div>
+                        <textarea value="<%-page.content%>" name="content" required>
+
+                        </textarea>
+                        <button type="submit" class="btn-submit">Submit</button>
+                    </form>
+
+                </div>
+    </div>
+    <%- include("./layouts/footer.ejs")%>

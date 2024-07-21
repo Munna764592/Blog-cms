@@ -1,0 +1,9 @@
+<%- include("./layouts/header.ejs")%>
+    <div class="pages-th">
+        <img style="margin-bottom: 20px;" class="heroimg" src="<%= page.image %>" alt="image">
+        <hr style="width: 50%; background-color: black;border-radius: 550px; height: 5px; margin: auto;opacity: 0.75; margin-bottom: 20px;" >
+        <div style="width: 90%; margin: auto;">
+            <%- page.content %>
+        </div>
+    </div>
+    <%- include("./layouts/footer.ejs")%>

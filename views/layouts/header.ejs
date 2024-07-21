@@ -1,0 +1,20 @@
+<%- include("./main.ejs")%>
+
+    <body>
+
+        <nav class="nav">
+            <i class="uil uil-bars navOpenBtn"></i>
+            <div style="display: flex;align-items: center;"><img class="logoimg" src="/logo/logoheader.png" alt="Image">
+                <a href="/" class="logo">Congesta College</a>
+            </div>
+            <ul class="nav-links">
+                <i class="uil uil-times navCloseBtn"></i>
+                <% if(typeof pages !=='undefined' ){ %>
+                    <% pages.forEach(function(page) { %>
+                        <li><a href="/page/<%=page.pagetitle%>">
+                                <%= page.pagetitle %>
+                            </a></li>
+                        <% }); %>
+                            <% } %>
+            </ul>
+        </nav>

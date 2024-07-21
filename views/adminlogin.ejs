@@ -1,0 +1,35 @@
+<%- include("./layouts/header.ejs")%>
+
+
+    <div class="login">
+        <div class="wrapper">
+            <header>Admin Login</header>
+            <form class="form" method="POST" action="/admin">
+                <div class="field email">
+                    <div class="input-area">
+                        <input name="username" type="text" placeholder="Username" required>
+                        <i class="icon fas fa-user"></i>
+                        <!-- <i class="error error-icon fas fa-exclamation-circle"></i> -->
+                    </div>
+                    <!-- <div class="error error-txt">Username can't be blank</div> -->
+                </div>
+                <div class="field password">
+                    <div class="input-area">
+                        <input id="password" name="password" type="password" placeholder="Password" required>
+                        <i class="icon fas fa-lock"></i>
+                        <!-- <i class="error error-icon fas fa-exclamation-circle"></i> -->
+                    </div>
+                    <!-- <div class="error error-txt">Password can't be blank</div> -->
+                </div>
+                <% if(typeof message !=='undefined' ){ %>
+                    <div style="color: red;">
+                        <%= decodeURIComponent(message)%>
+                    </div>
+                    <% } %>
+                        <!-- <div class="pass-txt"><a href="#">Forgot password?</a></div> -->
+                        <input type="submit" value="Login">
+            </form>
+            <!-- <div class="sign-txt">Not yet member? <a href="#">Signup now</a></div> -->
+        </div>
+    </div>
+    <%- include("./layouts/footer.ejs")%>
